@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn = new Button(this);
         btn.setText("클릭해 보세요.");
-        btn.setBackgroundColor(Color.rgb(35, 133, 152));
+        btn.setBackgroundColor(Color.rgb(178, 206, 234));
         btn.setTextColor(Color.WHITE);
         linear1.addView(btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                Toast.makeText(getApplicationContext(), "JAVA 코드로 작성한 버튼입니다.", Toast.LENGTH_SHORT).show();
             }
         });
 
